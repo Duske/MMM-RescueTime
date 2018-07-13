@@ -20,16 +20,17 @@ Module.register("MMM-RescueTime", {
 	},
 
 	start: function() {
-		this.today = {
+		var self = this;
+		self.today = {
 			labels: [],
 			dataSet: [],
 		};
-		this.sendSocketNotification("CONFIG", this.config);
-		Log.info("Starting module: " + this.name);
-		var seconds = this.config.interval * 1000;
+		self.sendSocketNotification("CONFIG", self.config);
+		Log.info("Starting module: " + self.name);
+		var seconds = self.config.interval * 1000;
 		Log.info("RescueTime fetches every " + seconds + "seconds");
 		window.setInterval(function() {
-			this.sendSocketNotification("GET_TODAY");
+			self.sendSocketNotification("GET_TODAY");
 		}, seconds);
 	},
 
