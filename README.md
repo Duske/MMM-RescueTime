@@ -9,7 +9,7 @@ This is a module for the [MagicMirror](https://github.com/MichMich/MagicMirror).
 
 ## Screenshot
 
-![Image of Yaktocat](mmm-rescuetime-screenshot.png)
+![MMM-RescueTime screenshot](mmm-rescuetime-screenshot.png)
 
 ## Usage
 
@@ -30,7 +30,6 @@ modules: [
 		}
 	}
 ]
-````
 
 ## Configuration
 
