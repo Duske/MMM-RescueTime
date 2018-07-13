@@ -1,0 +1,32 @@
+{
+  "name": "mmm-rescuetime",
+  "version": "1.0.0",
+  "description": "a magicmirror module to display your productivity from RescueTime",
+  "main": "MMM-RescueTime.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Duske@github.com/Duske/MMM-RescueTime.git"
+  },
+  "keywords": [
+    "magicmirror",
+    "rescueTime",
+    "productivity"
+  ],
+  "author": "Dustin Chabrowski <mail@duske.me> (https://duske.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Duske/MMM-RescueTime/issues"
+  },
+  "homepage": "https://github.com/Duske/MMM-RescueTime#readme",
+  "dependencies": {
+    "chart.js": "^2.7.2",
+    "date-fns": "^1.29.0",
+    "node-rescuetime": "^0.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
