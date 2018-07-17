@@ -19,7 +19,7 @@ generate one here: https://www.rescuetime.com/anapi/manage
 *Please note that only today's data will be shown.*
 
 Then add this module to your `config/config.js` file:
-````javascript
+```javascript
 modules: [
 	{
 		module: 'MMM-RescueTime',
@@ -30,6 +30,7 @@ modules: [
 		}
 	}
 ]
+``` 
 
 ## Configuration
 
