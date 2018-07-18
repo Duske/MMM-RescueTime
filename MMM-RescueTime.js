@@ -15,6 +15,7 @@ Module.register("MMM-RescueTime", {
 		if (notification === "TODAY") {
 			Log.info("Got rescuetime today data: " + this.name);
 			this.today = payload;
+			this.initialLoaded = true;
 			this.updateDom(3000);
 		}
 	},
@@ -25,6 +26,7 @@ Module.register("MMM-RescueTime", {
 			labels: [],
 			dataSet: [],
 		};
+		self.initialLoaded = false;
 		self.sendSocketNotification("CONFIG", self.config);
 		Log.info("Starting module: " + self.name);
 		var seconds = self.config.interval * 1000;
@@ -41,8 +43,16 @@ Module.register("MMM-RescueTime", {
 	getDom: function() {
 		let labels = this.today.labels;
 		let dataSet = this.today.dataSet;
-		let ctx = document.createElement("canvas");
 		let wrapper = document.createElement("div");
+		if(!this.initialLoaded) {
+			wrapper.innerHTML = "Loading";
+			return wrapper; 
+		}
+		if(this.initialLoaded && (labels.length === 0 || dataSet.length === 0)) {
+			wrapper.innerHTML = "No data available";
+			return wrapper; 	
+		}
+		let ctx = document.createElement("canvas");
 		wrapper.appendChild(ctx);
 		let data = {
 			labels: labels,
