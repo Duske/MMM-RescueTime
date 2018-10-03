@@ -44,12 +44,17 @@ Module.register("MMM-RescueTime", {
 		let labels = this.today.labels;
 		let dataSet = this.today.dataSet;
 		let wrapper = document.createElement("div");
+		let info = document.createElement("h1");
+		info.style.fontSize = ".8em";
+		info.style.fontWeight = "lighter";
 		if(!this.initialLoaded) {
-			wrapper.innerHTML = "Loading";
+			info.innerHTML = "Loading...";
+			wrapper.appendChild(info);
 			return wrapper; 
 		}
 		if(this.initialLoaded && (labels.length === 0 || dataSet.length === 0)) {
-			wrapper.innerHTML = "No data available";
+			info.innerHTML = "No data available yet";
+			wrapper.appendChild(info);
 			return wrapper; 	
 		}
 		let ctx = document.createElement("canvas");
