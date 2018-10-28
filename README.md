@@ -4,8 +4,8 @@ This is a module for the [MagicMirror](https://github.com/MichMich/MagicMirror).
 ## Installation
 1. Go to MagicMirror's `modules`.
 2. Run `git clone https://github.com/Duske/MMM-RescueTime`. 
-3. Go into the newly created directory with `cd MMM-RescueTime`.
-4. Execute `npm install` to install the node dependencies.
+3. Go into the newly created directory: `cd MMM-RescueTime`.
+4. Run `npm install` to install the node dependencies.
 
 ## Screenshot
 
@@ -13,7 +13,7 @@ This is a module for the [MagicMirror](https://github.com/MichMich/MagicMirror).
 
 ## Usage
 
-To able to use this module, make sure you have an RescueTime account (*free account is fine*) and a API key. You can 
+To able to use this module, make sure you have an RescueTime account (*free account is fine*) and an API key. You can 
 generate one here: https://www.rescuetime.com/anapi/manage
 
 *Please note that only today's data will be shown.*
@@ -21,14 +21,14 @@ generate one here: https://www.rescuetime.com/anapi/manage
 Then add this module to your `config/config.js` file:
 ```javascript
 modules: [
-	{
-		module: 'MMM-RescueTime',
-		position: 'top_right',	// Or any other region
-		header: 'RescueTime', // An optional title
-		config: {
-			// See 'Configuration options' for more information.
-		}
-	}
+    {
+        module: 'MMM-RescueTime',
+        position: 'top_right', // Or any other region
+        header: 'RescueTime', // An optional title
+        config: {
+            // See 'Configuration' for more information.
+        }
+    }
 ]
 ``` 
 
